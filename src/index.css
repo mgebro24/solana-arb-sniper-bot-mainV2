@@ -1,0 +1,75 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 52% 42%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 6% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 6% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 262 52% 52%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --positive: 122 39% 49%;
+    --positive-foreground: 0 0% 98%;
+
+    --highlight: 187 100% 42%;
+    --highlight-foreground: 0 0% 98%;
+
+    --border: 240 6% 15%;
+    --input: 240 6% 15%;
+    --ring: 262 52% 42%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar for the dashboard */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}
