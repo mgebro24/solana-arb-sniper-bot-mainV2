@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: '/solana-arb-sniper-bot-main/',
+  base: '/solana-arb-sniper-bot-mainV2/',
   plugins: [
     react(),
     mode === 'development' &&
